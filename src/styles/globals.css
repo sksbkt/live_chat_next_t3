@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-gray-100;
+}
+
+* {
+    /* user-select: none; */
+    outline: none;
+}
+
+.scrollCustom::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollCustom::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px 10px rgb(217, 217, 217);
+    border: solid 3px transparent;
+    @apply rounded-full
+}
+
+.scrollCustom::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 10px 10px rgb(171, 171, 171);
+    border: solid 3px transparent;
+    @apply rounded-full
+}

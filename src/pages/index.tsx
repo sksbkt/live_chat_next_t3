@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-
+import HelpWidget from "../components/HelpWidget";
 import { trpc } from "../utils/trpc";
 
 const Home: NextPage = () => {
@@ -19,6 +19,7 @@ const Home: NextPage = () => {
         <h1 className="text-5xl font-extrabold leading-normal text-gray-700 md:text-[5rem]">
           Create <span className="text-purple-300">T3</span> App
         </h1>
+        <HelpWidget />
       </main>
     </>
   );
