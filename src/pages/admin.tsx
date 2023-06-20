@@ -13,18 +13,21 @@ export default function admin() {
             <h1 className="text-5xl">
                 Admin page
             </h1>
-            <section className="flex flex-col">
+            <div className="min-w-max w-full">
+                <h3 className="">help requests</h3>
+                <section className="flex flex-col items-center self-center ">
+                    {helpRequests.data?.map((request) => (
+                        <button
+                            className="bg-blue-500 text-white p-2 px-3 rounded-sm hover:bg-blue-900 mt-3 w-64"
+                            onClick={() => handelRequestHelpClicked(request.id)}
+                            key={request.id}>
 
-                {helpRequests.data?.map((request) => (
-                    <button
-                        onClick={() => handelRequestHelpClicked(request.id)}
-                        key={request.id}>
-                        <span>
                             {request.id}
-                        </span>
-                    </button>))}
 
-            </section>
+                        </button>))}
+
+                </section>
+            </div>
 
         </main>
     </>);

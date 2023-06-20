@@ -56,7 +56,8 @@ export default function HelpWidget() {
             const channel = channelRef.current;
             channel?.sendMessage({ text });
             setMessages((prevMessages) => [...prevMessages, {
-                id: Math.floor(Math.random() * 1000), message: text
+                id: Math.floor(Math.random() * 1000),
+                message: text
             }]);
             setText('');
         }
