@@ -32,7 +32,7 @@ export default function HelpWidget() {
         setIsChatPanelDisplayed(true);
         const helpRequest = await createHelpRequestMutation.mutateAsync();
         const { default: AgoraRTM } = await import("agora-rtm-sdk");
-        const client = AgoraRTM.createInstance(process.env.NEXT_PUBLIC_AGORA_ID!);
+        const client = AgoraRTM.createInstance(process.env.NEXT_PUBLIC_AGORA_ID ?? '');
 
         await client.login({
             uid: `${Math.floor(Math.random() * 250)}`,
